@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+   
 }
 
 .container {
@@ -34,8 +35,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/computer.jpg');
+    height: 105%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/pasaporteaeropuertoportda.avif');
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
     z-index: -1;
@@ -43,7 +44,17 @@ body {
 
 
 /* Nav */
-
+.nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y el título (si lo mantienes) */
+  }
+  
+  .nav__logo img {
+    max-height: 167px;
+    margin-top: 4%;
+    width: auto;
+}
 .nav {
     --padding-container: 0;
     height: 100%;
@@ -81,7 +92,7 @@ body {
 
 .nav__img {
     display: block;
-    width: 30px;
+    width: 50px;
 }
 
 
@@ -113,7 +124,7 @@ body {
 
 .cta {
     display: inline-block;
-    background-color: #2091F9;
+    background-color: #1f6db6;
     justify-self: center;
     color: #fff;
     text-decoration: none;
@@ -121,31 +132,68 @@ body {
     border-radius: 32px;
 }
 
-/* About */
-
-.about {
-    text-align: center;
+/*servicios*/
+.btn-blue:hover {
+    background: #2a4365;
 }
 
-.subtitle {
-    color: var(--color-title);
-    font-size: 2rem;
-    margin-bottom: 25px;
+.section {
+    padding: 0rem 0rem;
 }
 
-
-.about__paragraph {
-    line-height: 1.7;
-}
-
-.about__main {
-    padding-top: 80px;
-    display: grid;
-    width: 90%;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-    gap: 1em;
-    overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #1a365d;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+    margin: 1%;
+}
+
+.service-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #2e2e2e;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #000000;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+.flags {
+    font-size: 2rem; /* Ajusta el tamaño de los emojis */
+    display: flex;
+    gap: 2rem; /* Espacio entre las banderas */
+}
+
+.service-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+
+.service-description {
+    color: #4a5568;
+    line-height: 1.5;
 }
 
 
@@ -310,10 +358,11 @@ body {
 }
 
 .testimony__course{
-    background-color: royalblue;
+    background-color: rgba(65, 105, 225, 0.366);
     color: #fff;
     display: inline-block;
     padding: 5px;
+    border-radius: 10%;
 }
 
 .testimony__arrow{
@@ -331,7 +380,7 @@ body {
     display: grid;
     gap: 2em;
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .questions__padding{
@@ -393,8 +442,36 @@ body {
     margin-bottom: 30px;
 }
 
-/* Footer */
 
+/*apartado de xq elegirnos*/
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+.feature-description {
+    color: #4a5568;
+    line-height: 1.5;
+}
+/* Footer */
+.footer__title img {
+    width: 120px;
+    height: auto;
+    
+}
 .footer{
     background-color: #1D293F;
 }
@@ -402,7 +479,7 @@ body {
 .footer__title{
     font-weight: 300;
     font-size: 2rem;
-    margin-bottom: 30px;
+    
 }
 
 .footer__title, .footer__newsletter{
@@ -418,14 +495,12 @@ body {
     padding-bottom: 60px;
 }
 
-.nav--footer{
-    padding-bottom: 20px;
-    display: grid;
-    gap: 1em;
-    grid-auto-flow: row;
+.nav--footer {
+    padding-bottom: 0px;
+    display: flex;
+    gap: 11em;
     height: 100%;
 }
-
 .nav__link--footer{
     display: flex;
     margin: 0;
@@ -481,7 +556,59 @@ body {
 .footer__img{
     width: 30px;
 }
+/*iconoi wsp abajo derecha*/
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+    transition: all 0.3s ease;
+}
 
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+.whatsapp-float i {
+    margin-top: 2px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
 /* Media queries */
 
 @media (max-width:800px){

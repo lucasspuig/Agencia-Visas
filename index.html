@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <meta name="theme-color" content="#2091F9">
 
@@ -18,8 +19,9 @@
 
     <header class="hero">
         <nav class="nav container">
-            <div class="nav__logo">
-                <h2 class="nav__title">Curso CSS.</h2>
+            <div class="nav__logo nav-logo">
+                <img src="./images/logo2(1).png" alt="Logo del curso">
+                
             </div>
 
             <ul class="nav__link nav__link--menu">
@@ -36,51 +38,62 @@
                     <a href="#" class="nav__links">Blog</a>
                 </li>
 
-                <img src="./images/macbook.png" class="nav__close">
+                <img src="./images/close.svg" class="nav__close">
             </ul>
 
             <div class="nav__menu">
-                <img src="./images/macbook.png" class="nav__img">
+                <img src="./images/menu.svg" class="nav__img">
             </div>
         </nav>
 
         <section class="hero__container container">
-            <h1 class="hero__title">Aprende CSS3 desde CERO hasta dominarlo.</h1>
-            <p class="hero__paragraph">Elige aprender CSS de una vez por todas, una vez que termines este curso serás
-                capaz de crear cualquier layout con CSS y crear tus propias animaciones.</p>
+            <h1 class="hero__title">Gestoría 100% Online</h1>
+            <p class="hero__paragraph">Te asesoramos en cada paso para que obtengas tu visa sin complicaciones y puedas viajar con total seguridad. </p>
             <a href="#" class="cta">Comienza ahora</a>
         </section>
     </header>
 
     <main>
-        <section class="container about">
-            <h2 class="subtitle">¿Qué aprenderás en este curso?</h2>
-            <p class="about__paragraph">Todo lo necesario y obligatorio de CSS, (Flexbox, Grid, Custom properties,
-                Position, Animaciones, Box Model y más)</p>
-
-            <div class="about__main">
-                <article class="about__icons">
-                    <img src="./images/shapes.svg" class="about__icon">
-                    <h3 class="about__title">CSS Layouts</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
-
-                <article class="about__icons">
-                    <img src="./images/paint.svg" class="about__icon">
-                    <h3 class="about__title">Animaciones</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
-
-                <article class="about__icons">
-                    <img src="./images/code.svg" class="about__icon">
-                    <h3 class="about__title">Sass</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
+    
+    <!-- Services Section -->
+    <section id="servicios" class="section">
+        <div class="container">
+            <h2 class="section-title" >Nuestros servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3 class="service-title">Visa de Turista</h3>
+                    <p class="service-description">Para viajar a Estados Unidos, Canadá, China, Australia, Nueva Zelanda, México y mucho más…                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3 class="service-title">Visa de estudiante</h3>
+                    <p class="service-description">Para estudiar en Estados Unidos, Canadá, Francia, UK, Australia y mucho más…</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎟️</div>
+                    <h3 class="service-title">Lotería de Visas</h3>
+                    <p class="service-description">Participa en el sorteo mundial para obtener la Green Card y vivir en Estados Unidos. Te guiamos en cada paso para maximizar tus oportunidades en la lotería de visas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Permiso ETA y ESTA</h3>
+                    <p class="service-description">Viaja a Canadá y Estados Unidos sin inconvenientes con los permisos ETA y ESTA, perfectos para estadías cortas y visitas rápidas. Nos encargamos de todo el proceso para que tengas tus documentos listos y disfrutes de un viaje fluido.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🇮🇹 🇪🇸</div>
+                    <h3 class="service-title">Ciudadanías Italiana y Española</h3>
+                    <p class="service-description">Obtene la ciudadanía italiana o española con nuestro respaldo profesional y experiencia en trámites de doble nacionalidad.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="service-title">Reunificación Familiar</h3>
+                    <p class="service-description">Reúne a tu familia en el país de tus sueños con nuestro servicio de reunificación familiar. Si tienes familiares ciudadanos en EE.UU., solicita tu Green Card. Te acompañamos en cada paso para que vuelvas a estar junto a tus seres queridos.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
+
 
         <section class="knowledge">
             <div class="knowledge__container container">
@@ -151,11 +164,8 @@
 
                 <section class="testimony__body testimony__body--show" data-id="1">
                     <div class="testimony__texts">
-                        <h2 class="subtitle">Mi nombre es Jordan Alexander, <span class="testimony__course">estudiante
-                                de CSS.</span></h2>
-                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                            esse, asperiores eaque totam nulla repudiandae quasi, deserunt culpa exercitationem
-                            blanditiis laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                        <h2 class="subtitle">Mi nombre es Jesica Gabas,  <span class="testimony__course">asesora de visas.</span></h2>
+                        <p class="testimony__review"> Te ayudo a gestionar tu visa de manera rápida y segura, brindándote acompañamiento en cada paso del proceso. ¡Viaja sin preocupaciones! 🌍✈️,</p>
                     </div>
 
                     <figure class="testimony__picture">
@@ -210,76 +220,91 @@
 
         <section class="questions container">
             <h2 class="subtitle">Preguntas frecuentes</h2>
-            <p class="questions__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, porro
-                doloribus neque perspiciatis sapiente fuga.</p>
+            <p class="questions__paragraph">📌 Todo lo que necesitas saber antes de solicitar tu visa</p>
 
             <section class="questions__container">
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué es CSS?
+                        <h3 class="questions__title">¿Qué tipo de visas puedo solicitar con su agencia?
                             <span class="questions__arrow">
                                 <img src="./images/arrow.svg" class="questions__img">
                             </span>
                         </h3>
 
-                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-                            facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
-                            eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
-                            nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
-                            quam atque?</p>
+                        <p class="questions__show">Ofrecemos asesoría para visas de turismo, estudio, trabajo, residencia, reunificación familiar y más.</p>
                     </div>
                 </article>
 
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué aprenderé en este curso?
+                        <h3 class="questions__title">¿Cuánto tiempo tarda el proceso de solicitud de visa?
                             <span class="questions__arrow">
                                 <img src="./images/arrow.svg" class="questions__img">
                             </span>
                         </h3>
 
-                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-                            facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
-                            eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
-                            nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
-                            quam atque?</p>
+                        <p class="questions__show">El tiempo varía según el tipo de visa y el país de destino. Podemos orientarte sobre los plazos estimados.</p>
                     </div>
                 </article>
 
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué es CSS GRID?
+                        <h3 class="questions__title">¿Garantizan la aprobación de la visa?
                             <span class="questions__arrow">
                                 <img src="./images/arrow.svg" class="questions__img">
                             </span>
                         </h3>
 
-                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-                            facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
-                            eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
-                            nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
-                            quam atque?</p>
+                        <p class="questions__show">No podemos garantizar la aprobación, ya que la decisión final depende de la embajada o el consulado. Sin embargo, maximizamos tus posibilidades con asesoría experta.</p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Pueden ayudarme si ya me rechazaron una visa?
+                            <span class="questions__arrow">
+                                <img src="./images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">Sí, analizamos tu caso y te orientamos para presentar una nueva solicitud con más probabilidades de éxito.</p>
                     </div>
                 </article>
             </section>
 
             <section class="questions__offer">
-                <h2 class="subtitle">¿Estas listo para aprender CSS?</h2>
-                <p class="questions__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
-                    architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
-                    eius atque tempora iure ab non autem.</p>
-                <a href="#" class="cta">Aprende ahora</a>
+                <div class="container">
+                    <h2 class="section-title">¿Por qué elegirnos?</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <div class="feature-icon">🤝</div>
+                            <h3 class="feature-title">Confianza</h3>
+                            <p class="feature-description">Con más de 15 años de experiencia en la gestión de visas, nuestro equipo se dedica a garantizar que cada trámite sea exitoso y confiable.</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✓</div>
+                            <h3 class="feature-title">Rapidez</h3>
+                            <p class="feature-description">Brindamos un servicio 100% profesional y personalizado, especialmente orientado a la satisfacción de lo que necesites.</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">💳</div>
+                            <h3 class="feature-title">Compromiso</h3>
+                            <p class="feature-description">Nuestra agencia de visas se basa en el compromiso de ofrecer asesoría clara y transparente en cada etapa del trámite.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </section>
     </main>
 
+    <a href="https://wa.me/5493434194377" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <footer class="footer">
         <section class="footer__container container">
             <nav class="nav nav--footer">
-                <h2 class="footer__title">Curso CSS.</h2>
+            
 
                 <ul class="nav__link nav__link--footer">
                     <li class="nav__items">
@@ -295,6 +320,10 @@
                         <a href="#" class="nav__links">Blog</a>
                     </li>
                 </ul>
+
+                <h2 class="footer__title">
+                    <img src="./images/logo2(1).png" alt="Logo de la agencia" />
+                </h2>
             </nav>
 
             <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
@@ -308,11 +337,16 @@
 
         <section class="footer__copy container">
             <div class="footer__social">
-                <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
-                <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
-                <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+                <a href="https://wa.me/tu-numero-de-whatsapp" class="footer__icons" target="_blank">
+                    <img src="./images/whatsapp-symbol-logo-svgrepo-com.svg" class="footer__img" alt="WhatsApp">
+                </a>
+                <a href="https://www.facebook.com/tu-pagina" class="footer__icons" target="_blank">
+                    <img src="./images/facebook-2-logo-svgrepo-com.svg" class="footer__img" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/tu-perfil" class="footer__icons" target="_blank">
+                    <img src="./images/instagram-2016-logo-svgrepo-com.svg" class="footer__img" alt="Instagram">
+                </a>
             </div>
-
             <h3 class="footer__copyright">Derechos reservados &copy; Jordan Alexander</h3>
         </section>
     </footer>
