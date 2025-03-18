@@ -28,16 +28,22 @@
                 <li class="nav__items">
                     <a href="#" class="nav__links">Inicio</a>
                 </li>
-                <li class="nav__items">
-                    <a href="#" class="nav__links">Acerca de</a>
+
+                <li class="nav__items dropdown">
+                    <a href="#" class="nav__links dropdown__trigger">Acerca de <span class="dropdown__arrow">▼</span></a>
+                    <div class="dropdown__content">
+                        <a href="#servicios">Servicios</a>
+                        <a href="#nosotros">Nosotros</a>
+                        <a href="#preguntas">Preguntas</a>
+                    </div>
                 </li>
 
                 <li class="nav__items">
-                    <a href="#" class="nav__links">Contacto</a>
+                    <a href="#contacto" class="nav__links">Contacto</a>
                 </li>
 
                 <li class="nav__items">
-                    <a href="#" class="nav__links">Blog</a>
+                    <a href="#blog" class="nav__links">Blog</a>
                 </li>
 
                 <img src="./images/close.svg" class="nav__close">
@@ -113,7 +119,7 @@
     </section>
 
 
-        <section class="knowledge">
+        <section class="knowledge" id="nosotros">
             <div class="knowledge__container container">
                 <div class="knowledege__texts">
                     <h2 class="subtitle">Nosotros</h2>
@@ -176,7 +182,7 @@
             </div>
         </section>
 
-        <section class="testimony">
+        <section class="testimony" id="blog">
             <div class="testimony__container container">
                 <img src="./images/leftarrow.svg" class="testimony__arrow" id="before">
 
@@ -236,7 +242,7 @@
             </div>
         </section>
 
-        <section class="questions container">
+        <section class="questions container" id="preguntas">
             <h2 class="subtitle">Preguntas frecuentes</h2>
             <p class="questions__paragraph">📌 Todo lo que necesitas saber antes de solicitar tu visa</p>
 
@@ -315,11 +321,11 @@
         </section>
     </main>
 
-    <a href="https://wa.me/5493434194377" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/543434590975" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer class="footer">
+    <footer class="footer" id="contacto">
         <section class="footer__container container">
             <nav class="nav nav--footer">
             
