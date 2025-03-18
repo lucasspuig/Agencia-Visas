@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASTER EN CSS</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Agencia de Visas</title>
+    <link rel="shortcut icon" href="./images/logo2(2) - copia.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -31,9 +31,11 @@
                 <li class="nav__items">
                     <a href="#" class="nav__links">Acerca de</a>
                 </li>
+
                 <li class="nav__items">
                     <a href="#" class="nav__links">Contacto</a>
                 </li>
+
                 <li class="nav__items">
                     <a href="#" class="nav__links">Blog</a>
                 </li>
@@ -46,11 +48,27 @@
             </div>
         </nav>
 
-        <section class="hero__container container">
-            <h1 class="hero__title">Gestoría 100% Online</h1>
-            <p class="hero__paragraph">Te asesoramos en cada paso para que obtengas tu visa sin complicaciones y puedas viajar con total seguridad. </p>
-            <a href="#" class="cta">Comienza ahora</a>
+        <section id="inicio" class="hero__container container">
+            <div class="hero-content">
+                <div class="hero-text-container">
+                    <span class="greeting">Bienvenidos</span>
+                    <h1>AGENCIA DE VISAS</h1>
+                    <p class="typing-text">Asesoría + Trámites + Soluciones</p>
+                    <p class="hero-description">Te guiamos en cada paso para obtener tu visa sin complicaciones.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn primary">Nuestros Servicios</a>
+                    <a href="#contacto" class="btn secondary">Solicitar Asesoría</a>
+                </div>
+            </div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
         </section>
+
+        
     </header>
 
     <main>
@@ -169,7 +187,7 @@
                     </div>
 
                     <figure class="testimony__picture">
-                        <img src="./images/face.jpg" class="testimony__img">
+                        <img src="./images/NosB09.webp" class="testimony__img">
                     </figure>
                 </section>
 
@@ -327,7 +345,7 @@
             </nav>
 
             <form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
-                <h2 class="footer__newsletter">Suscribete a la newsletter</h2>
+                <h2 class="footer__newsletter">Envíanos tu consulta.</h2>
                 <div class="footer__inputs">
                     <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
                     <input type="submit" value="Registrate" class="footer__submit">
@@ -337,20 +355,22 @@
 
         <section class="footer__copy container">
             <div class="footer__social">
-                <a href="https://wa.me/tu-numero-de-whatsapp" class="footer__icons" target="_blank">
-                    <img src="./images/whatsapp-symbol-logo-svgrepo-com.svg" class="footer__img" alt="WhatsApp">
+                <a href="https://wa.me/543434590975" class="footer__icons" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="https://www.facebook.com/tu-pagina" class="footer__icons" target="_blank">
-                    <img src="./images/facebook-2-logo-svgrepo-com.svg" class="footer__img" alt="Facebook">
+                <a href="https://facebook.com/agencia_de_visas" class="footer__icons" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/tu-perfil" class="footer__icons" target="_blank">
-                    <img src="./images/instagram-2016-logo-svgrepo-com.svg" class="footer__img" alt="Instagram">
+                <a href="https://instagram.com/agencia_devisas" class="footer__icons" target="_blank">
+                    <i class="fab fa-instagram"></i>
                 </a>
             </div>
-            <h3 class="footer__copyright">Derechos reservados &copy; Jordan Alexander</h3>
+            <h3 class="footer__copyright">Derechos reservados &copy; Agencia de visas</h3>
         </section>
     </footer>
 
+    <script src="./js/linkdesplegable.js"></script>
+    <script src="./js/hero.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/questions.js"></script>
     <script src="./js/menu.js"></script>
