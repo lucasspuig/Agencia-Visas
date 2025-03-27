@@ -1,0 +1,7 @@
+@media (max-width: 375px){
+    .nav__logo img {
+        max-height: 130px;
+        margin-top: 3%;
+        width: auto;
+    }
+}

@@ -20,6 +20,19 @@
     --transition: all 0.3s ease;
 }
 
+
+h2{
+    font-family: Phudu, sans-serif;;
+    color: #081e0c;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 88px;
+    
+    }
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -318,17 +331,25 @@ body {
 }
 
 .section {
-    padding: 0rem 0rem;
+    padding: 7rem 0rem;
 }
 
-.container {
+.containerr {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .section-title {
+    font-family: Phudu, sans-serif;;
+    
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 88px;
     text-align: center;
-    font-size: 2rem;
+    
     margin-bottom: 3rem;
     color: #1a365d;
 }
@@ -390,7 +411,119 @@ body {
     width: 40px;
 }
 
+/* animaciones servicio */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+
+.service-card {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a365d;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+
+
+.service-card.visible {
+    animation: fadeInDown 1.9s ease forwards;
+}
+
+
+.service-card.visible .service-icon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Alternar entrada de los íconos desde la izquierda o la derecha */
+.service-card:nth-child(odd) .service-icon.bouncing {
+    animation: slideInLeft 1.8s ease forwards;
+}
+
+.service-card:nth-child(even) .service-icon.bouncing {
+    animation: slideInRight 1.8s ease forwards;
+}
+
+
+
+
 /* Knowledge */
+.avion-nosotros{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1%;
+    
+}
+.pretitle-image {
+   
+    top: auto;
+    bottom: 0;
+    right: 0;
+}
+.pretitle-image {
+    opacity: 0;
+    transform: translate3d(-50px, 50px, 0px) rotate(15deg); 
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    width: 6%;
+}
+
 
 .knowledge {
     background-color: #e5e5f7;
@@ -416,9 +549,31 @@ body {
     margin-bottom: 15px;
 }
 
-.knowledge__img{
+
+/* Estilo inicial de la imagen */
+.knowledge__img {
     width: 100%;
     display: block;
+    opacity: 0; /* La imagen estará oculta al principio */
+    transform: translateX(-100%); /* La imagen comienza desde la izquierda fuera de la pantalla */
+    transition: opacity 0.5s ease, transform 1s ease; /* Transición suave cuando la animación se activa */
+}
+
+/* Animación para la imagen cuando entra en la vista */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Comienza desde fuera de la pantalla */
+        opacity: 0; /* Invisible al inicio */
+    }
+    100% {
+        transform: translateX(0); /* Llega a su posición original */
+        opacity: 1; /* Se hace visible */
+    }
+}
+
+/* Clase que activa la animación */
+.knowledge__img.animate {
+    animation: slideInFromLeft 2.6s ease forwards; /* Aplica la animación */
 }
 
 /* price */
@@ -647,6 +802,17 @@ body {
     line-height: 1.5;
 }
 /* Footer */
+
+.footer__newsletter{
+    font-family: Phudu, sans-serif;
+    color: #081e0c;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 35px;
+}
 .footer__title img {
     width: 120px;
     height: auto;
@@ -674,11 +840,17 @@ body {
     border-bottom: 1px solid #fff;
     padding-bottom: 60px;
 }
-
+.nav1 {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 59px 0px 202px 0px;
+}
 .nav--footer {
     padding-bottom: 0px;
     display: flex;
-    gap: 11.5rem;
+    gap: 10rem;
     height: 100%;
 }
 .nav__link--footer{
@@ -686,6 +858,15 @@ body {
     margin: 0;
     margin-right: 20px;
     flex-wrap: wrap;
+}
+.nav__links{
+    font-family: Phudu, sans-serif;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 35px;
 }
 
 .footer__inputs{
@@ -727,8 +908,8 @@ body {
 }
 
 .footer__copyright{
-    font-weight: 300;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 11px;
     margin-top: 2%;
 }
 
@@ -976,7 +1157,13 @@ body {
     .nav__link--footer{
         justify-content: space-between;
     }
-
+    .nav__link--footer {
+        display: flex;
+        margin: 0;
+        margin-right: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
     .footer__inputs{
         flex-wrap: wrap;
     }
@@ -997,4 +1184,103 @@ body {
         width: 100%;
         */
     }
+}
+
+@media (max-width: 375px){
+
+    /*hero y nav*/
+    .hero::before {
+        height: 105%;
+    }
+    .nav__logo img {
+        max-height: 130px;
+        margin-top: 3%;
+        width: auto;
+    }
+    .greeting {
+        font-size: 1.7rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .typing-text {
+        font-size: 1.2rem;
+    }
+    .hero-description {
+        font-size: 0.9rem;
+        margin: 9px auto;
+    }
+    .hero__container {
+        gap: 0em;
+        padding-bottom: 54px;
+        
+    }
+    /*servicios*/
+    .services-grid {
+        gap: 2rem;
+        
+    }
+    /*nosotros*/
+    .knowledge__paragraph {
+        padding: 15px 5px 15px 5px;
+        margin-bottom: 5px;
+    }
+    /*fotter*/
+    .nav1 {
+        padding: 8px 0px 0px 0px;
+    }
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        padding-bottom: 0px;
+    }
+    .footer__input {
+        flex-basis: 6%;
+        margin: 0;
+        margin-bottom: 0px;
+        gap: 2rem;
+    }
+    .nav--footer {
+        padding-bottom: 22px;
+        display: flex;
+        gap: 0rem;
+        height: 84%;
+    }
+    .nav__links {
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .nav__link--footer {
+        display: flex;
+        margin: 0;
+        margin-right: 0px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nav__link { 
+        gap: 0.5em;
+    }
+
+    .nav__link--footer {
+        display: flex;
+        flex-direction: row;
+    }
+    
+.footer__title img {
+    width: 120px;
+    height: auto;
+    margin-top: 30%;
+}
+.footer__copyright {
+    font-weight: 300;
+    font-size: 10px;
+    margin-top: 2%;
+}
+.footer__social {
+    text-align: center;
+    margin-left: 13%;
+}
 }
