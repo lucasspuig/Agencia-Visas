@@ -743,6 +743,9 @@ body {
 
 
 /* Nav */
+
+
+
 .nav__logo {
     display: flex;
     align-items: center;
@@ -1900,7 +1903,234 @@ body {
         */
     }
 }
+@media (max-width: 425px){
+      /*hero y nav*/
+      .hero::before {
+        height: 105%;
+    }
+    .nav__logo img {
+        max-height: 140px;
+        margin-top: 3%;
+        width: auto;
+    }
+    .nav__img {
+        display: block;
+        width: 62px;
+    }
+    .greeting {
+        font-size: 2.1rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .typing-text {
+        font-size: 1.2rem;
+    }
+    .hero-description {
+        font-size: 0.9rem;
+        margin: 9px auto;
+    }
+    .hero__container {
+        gap: 0em;
+        padding-bottom: 54px;
+        
+    }
+    /*servicios*/
+    .services-grid {
+        gap: 2rem;
+        
+    }
+    .section-title {
+        font-family: Phudu, sans-serif;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 56px;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #1a365d;
+    }
+    /*nosotros*/
+    .knowledge__paragraph {
+        padding: 15px 5px 15px 5px;
+        margin-bottom: 5px;
+    }
+    .pretitle-image {
+        opacity: 0;
+        transform: translate3d(-50px, 50px, 0px) rotate(15deg);
+        transition: opacity 0.9sease-out, transform 0.9sease-out;
+        width: 12%;
+        margin-top: 2%;
+    }
+    .subtitle {
+        font-size: 2.9rem;
+        text-align: center;
+        padding-left: 63px;
+    }
 
+    h2 {
+        font-family: Phudu, sans-serif;
+        color: #081e0c;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 54px;
+    }
+    .cta {
+        font-size: 1.1rem;
+        display: inline-block;
+        background-color: #1f6db6;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 40px;
+        border-radius: 32px;
+    }
+    /* seccion de jesi */
+    .subtitlejes {
+        font-family: Phudu, sans-serif;
+        color: rgb(8, 30, 12);
+        text-transform: uppercase;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 39px;
+        font-weight: 800;
+        line-height: 39px;
+        text-align: center;
+    }
+    .testimony__container {
+        grid-template-columns: 14px 1fr 16px;
+        /* gap: 0.9em; */
+    }
+    .testimony__review {
+        padding: 10px 10px 0px 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .testimony__course {
+        background-color: rgba(65, 105, 225, 0.366);
+        color: #fff;
+        display: inline-block;
+        padding: 8px;
+        border-radius: 10%;
+    }
+    .testimony__img {
+        border-radius: 5%;
+
+    }
+    .testimony__img {
+        width: 301px;
+        height: 356px;
+    }
+    .testimony__course {
+        margin-top: 20px;
+    }
+
+    /* seccion de preguntas */
+    .subtitlepregunta {
+        font-family: Phudu, sans-serif;
+        color: #081e0c;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+    .questions__paragraph{
+        font-size: 15px;
+    }
+    /* seccion por que elegirnos */
+    .section-titleelegirnos {
+        font-family: Phudu, sans-serif;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 80px;
+        text-align: center;
+        margin-bottom: 4rem;
+        color: #1a365d;
+    }
+
+    /*fotter*/
+    .nav1 {
+        padding: 8px 0px 0px 6px;
+    }
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        padding-bottom: 0px;
+    }
+    .footer__input {
+        flex-basis: 6%;
+        margin: 0;
+        margin-bottom: 0px;
+        gap: 2rem;
+    }
+    .nav--footer {
+        padding-bottom: 22px;
+        display: flex;
+        gap: 0rem;
+        height: 84%;
+    }
+    .footer__newsletter {
+        font-family: Phudu, sans-serif;
+        
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 35px;
+    }
+
+    .nav__links {
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .nav__link--footer {
+        display: flex;
+        margin: 0;
+        margin-right: 0px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nav__link { 
+        gap: 0.5em;
+    }
+
+    .nav__link--footer {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .footer__title img {
+        width: 120px;
+        height: auto;
+        margin-top: 30%;
+        margin-right: -21px;
+    }
+.footer__copyright {
+    font-weight: 300;
+    font-size: 10px;
+    margin-top: 2%;
+}
+.footer__social {
+    text-align: center;
+    margin-left: 13%;
+}
+
+
+}
 @media (max-width: 375px){
 
     /*hero y nav*/
@@ -1986,6 +2216,10 @@ body {
         font-weight: 800;
         line-height: 35px;
         text-align: center;
+    }
+    .testimony__container {
+        grid-template-columns: 14px 1fr 16px;
+        /* gap: 0.9em; */
     }
     .testimony__review {
         padding: 10px 10px 0px 10px;
