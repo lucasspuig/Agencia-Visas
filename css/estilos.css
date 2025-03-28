@@ -721,7 +721,7 @@ body {
     width: 100%;
     height: 100vh;
     min-height: 600px;
-    max-height: 800px;
+    max-height: 880px;
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
@@ -2353,6 +2353,36 @@ body {
 }
 @media (min-width: 330px) and (max-width: 375px) {
         /*hero y nav*/
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            max-height: 700px;
+            position: relative;
+            display: grid;
+            grid-template-rows: 100px 1fr;
+            color: #fff;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/pasaporteaeropuertoportda.avif');
+            background-size: cover;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+            z-index: -1;
+        }
+        
+
+
+
+
+
         .hero::before {
             height: 100%;
         }
