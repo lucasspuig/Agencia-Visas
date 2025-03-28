@@ -1590,8 +1590,9 @@ body {
     font-size: 1rem;
     outline: none;
     border: none;
-    margin-right: 16px;
+    margin-right: 2px;
 }
+
 
 .footer__submit{
     margin-left: auto;
@@ -2131,7 +2132,7 @@ body {
 
 
 }
-@media (min-width: 375px) and (max-width: 424px) {
+@media (min-width: 375px) and (max-width: 425px) {
 
     /*hero y nav*/
     .hero::before {
@@ -2344,7 +2345,7 @@ body {
     margin-left: 13%;
 }
 }
-@media (min-width: 330px) and (max-width: 374px) {
+@media (min-width: 330px) and (max-width: 375px) {
         /*hero y nav*/
         .hero::before {
             height: 100%;
@@ -2555,7 +2556,9 @@ body {
         text-align: center;
         margin-left: 13%;
     }
-
+    .footer__inputs input {
+        width: 38%;
+    }
     .footer__submit {
         margin-left: auto;
         display: inline-block;
