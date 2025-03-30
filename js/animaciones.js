@@ -73,6 +73,120 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//animacion seccion jesi 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const subtitle = document.querySelector(".subtitlejes");
+    const testimony = document.querySelector(".testimony__review");
+
+    const observerSubtitle = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    subtitle.classList.add("visible");
+                    observerSubtitle.unobserve(subtitle); // Evita repetir la animación
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    const observerTestimony = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    testimony.classList.add("visible");
+                    observerTestimony.unobserve(testimony); // Evita repetir la animación
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    observerSubtitle.observe(subtitle);
+    observerTestimony.observe(testimony);
+});
+
+//animacion imagen jsi
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonyImg = document.querySelector(".testimony__img");
+
+    const observerTestimonyImg = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    testimonyImg.classList.add("visible");
+                    observerTestimonyImg.unobserve(testimonyImg); // Evita repetir la animación
+                }
+            });
+        },
+        { threshold: 0.5 } // Cuando el 50% de la imagen sea visible
+    );
+
+    observerTestimonyImg.observe(testimonyImg);
+});
+
+//animaciones seccion de preguntas
+
+document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".questions__padding");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("visible");
+                    }, index * 200); // Retraso escalonado (200ms entre cada pregunta)
+                    observer.unobserve(entry.target); // Evita que la animación se repita
+                }
+            });
+        },
+        { threshold: 0.7 } // Se activa cuando el 30% de la pregunta es visible
+    );
+
+    questions.forEach((question) => observer.observe(question));
+});
+
+//animaciones seccion de xq elegirnoi
+
+document.addEventListener("DOMContentLoaded", function () {
+    const features = document.querySelectorAll(".feature");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("visible");
+                    }, index * 200); // Retraso escalonado (200ms entre cada elemento)
+                    observer.unobserve(entry.target); // Evita que la animación se repita
+                }
+            });
+        },
+        { threshold: 0.8 } // Se activa cuando el 30% del elemento es visible
+    );
+
+    features.forEach((feature) => observer.observe(feature));
+});
 
 
+//animaciones seccion fotter
+document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.querySelector("footer");
 
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("footer__visible");
+                } else {
+                    entry.target.classList.remove("footer__visible"); // Reinicia la animación al salir
+                }
+            });
+        },
+        { threshold: 0.3 } // Se activa cuando el 30% del footer es visible
+    );
+
+    observer.observe(footer);
+});

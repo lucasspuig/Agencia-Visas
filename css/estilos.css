@@ -1324,6 +1324,8 @@ body {
 }
 
 /* Testimony */
+
+
 .subtitlejes {
     font-family: Phudu, sans-serif;
     color: rgb(8, 30, 12);
@@ -1333,7 +1335,42 @@ body {
     font-size: 38px;
     font-weight: 700;
     line-height: 55px;
+
 }
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Ocultar inicialmente */
+.subtitlejes {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.testimony__review {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Clase que activa la animación */
+.subtitlejes.visible {
+    animation: slideInLeft 1.8s ease-out forwards;
+}
+
+.testimony__review.visible {
+    animation: slideInLeft 1.8s ease-out forwards;
+}
+
+
 
 .testimony{
     background-color: #e5e5f7;
@@ -1365,13 +1402,35 @@ body {
     transition: opacity 1.5s ease-in-out;
 }
 
-.testimony__img{
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimony__img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
     object-position: 50% 30%;
+
+    /* Ocultar inicialmente */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+/* Clase que se agregará cuando el elemento sea visible */
+.testimony__img.visible {
+    animation: slideInUp 1.8s ease-out forwards;
+}
+
 
 .testimony__texts{
     max-width: 700px;
@@ -1418,6 +1477,32 @@ body {
     border: 1px solid #5454D4;
     border-radius: 6px;
 }
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ocultar inicialmente */
+.questions__padding {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Clase que activa la animación */
+.questions__padding.visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+
 
 .questions__padding--add{
     padding-bottom: 30px;
@@ -1507,6 +1592,34 @@ body {
     color: #4a5568;
     line-height: 1.5;
 }
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Ocultar inicialmente */
+.feature {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Clase que activa la animación */
+.feature.visible {
+    animation: slideInLeft 1.4s ease-out forwards;
+}
+
+
+
+
+
 /* Footer */
 
 .footer__newsletter{
@@ -1640,6 +1753,41 @@ body {
 .footer__img{
     width: 30px;
 }
+
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-50px); /* Comienza 50px por encima */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Se mueve a su posición original */
+        opacity: 1;
+    }
+}
+
+/* Inicialmente, ocultamos el footer */
+.footer__container,
+.footer__copy {
+    opacity: 0;
+    transform: translateY(-50px); /* Posición inicial más arriba */
+}
+
+/* Aplicar la animación al entrar */
+.footer__visible .footer__container,
+.footer__visible .footer__copy {
+    animation: fadeDown 1.5s ease-out forwards;
+}
+
+/* Mantener el color de las letras tal como están, sin cambios de color */
+.footer__title,
+.footer__newsletter,
+.footer__copyright,
+.nav__links {
+    opacity: 1; /* Mantener el texto visible */
+}
+
+
 /*iconoi wsp abajo derecha*/
 .whatsapp-float {
     position: fixed;
@@ -2269,7 +2417,7 @@ body {
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 25px;
+        font-size: 33px;
         font-weight: 700;
         line-height: 80px;
         text-align: center;
@@ -2513,7 +2661,7 @@ body {
             text-transform: uppercase;
             margin-top: 0;
             margin-bottom: 0;
-            font-size: 25px;
+            font-size: 31px;
             font-weight: 700;
             line-height: 80px;
             text-align: center;
