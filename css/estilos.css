@@ -1414,16 +1414,14 @@ body {
 }
 
 .testimony__img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: 310px;
+    height: 343px;
+    border-radius: 5%;
     object-fit: cover;
-    object-position: 50% 30%;
-
-    /* Ocultar inicialmente */
+    object-position: 50% 99%;
     opacity: 0;
     transform: translateY(100px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.6sease-out, transform 0.6sease-out;
 }
 
 /* Clase que se agregará cuando el elemento sea visible */
