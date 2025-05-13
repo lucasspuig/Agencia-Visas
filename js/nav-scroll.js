@@ -1,24 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.querySelector('.nav');
-    let lastScroll = window.scrollY;
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.scrollY;
+const header = document.getElementById("header");
+let lastScroll = window.pageYOffset;
 
-        // Agregar fondo cuando se hace scroll
-        if (currentScroll > 100) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
 
-        // Ocultar nav cuando se hace scroll hacia abajo
-        if (currentScroll > lastScroll && currentScroll > 200) {
-            nav.classList.add('hidden');
-        } else {
-            nav.classList.remove('hidden');
-        }
+  if (currentScroll <= 0) {
+    header.classList.remove("scrolled-up", "scrolled-down");
+    header.classList.add("default");
+    return;
+  }
 
-        lastScroll = currentScroll;
-    });
+  if (currentScroll > lastScroll) {
+    header.classList.remove("scrolled-up", "default");
+    header.classList.add("scrolled-down");
+  } else {
+    header.classList.remove("scrolled-down", "default");
+    header.classList.add("scrolled-up");
+  }
+
+  lastScroll = currentScroll;
 });
