@@ -1,42 +1,65 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuButton = document.querySelector('.nav__menu'); // Menú hamburguesa
-    const closeButton = document.querySelector('.nav__close'); // Botón de cerrar
-    const menu = document.querySelector('.nav__link--menu'); // Lista del menú
-    const navLinks = document.querySelectorAll('.nav__links'); // Enlaces dentro del menú
-    const dropdown = document.querySelector('.dropdown'); // El contenedor del dropdown
-    const dropdownTrigger = dropdown.querySelector('.dropdown__trigger'); // El enlace que abre el dropdown
+    const menuButton = document.querySelector('.nav__menu');
+    const closeButton = document.querySelector('.nav__close');
+    const menu = document.querySelector('.nav__link--menu');
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdownTriggers = document.querySelectorAll('.dropdown__trigger');
 
-    // Abrir el menú cuando se hace clic en el botón de menú hamburguesa
+    // Abrir menú móvil
     menuButton.addEventListener('click', function () {
-        menu.classList.add('show-menu'); // Muestra el menú
+        menu.classList.add('show-menu');
     });
 
-    // Cerrar el menú cuando se hace clic en el botón de cerrar
+    // Cerrar menú móvil
     closeButton.addEventListener('click', function () {
-        menu.classList.remove('show-menu'); // Oculta el menú
+        menu.classList.remove('show-menu');
+        dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
     });
 
-    // Redirigir y cerrar el menú al hacer clic en un enlace dentro del menú
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            if (!link.closest('.dropdown')) { // Solo cierra el menú si el enlace no es parte del dropdown
-                menu.classList.remove('show-menu');
+    // Manejar dropdowns
+    dropdownTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            const currentDropdown = this.closest('.dropdown');
+
+            // Si el dropdown actual está activo, lo cerramos
+            if (currentDropdown.classList.contains('active')) {
+                currentDropdown.classList.remove('active');
+                return;
             }
+
+            // Cerrar otros dropdowns
+            dropdowns.forEach(dropdown => {
+                if (dropdown !== currentDropdown) {
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            // Abrir el dropdown actual
+            currentDropdown.classList.add('active');
         });
     });
 
-    // Abrir el dropdown al hacer clic en "Acerca de"
-    dropdownTrigger.addEventListener('click', function (e) {
-        e.preventDefault(); // Evita que el enlace se siga
-        e.stopPropagation(); // Detiene la propagación del clic hacia el documento
-        dropdown.classList.toggle('active'); // Alterna la clase 'active' para mostrar/ocultar el dropdown
-    });
-
-    // Cerrar el dropdown si se hace clic fuera de él
+    // Cerrar dropdowns y menú al hacer click fuera
     document.addEventListener('click', function (e) {
-        if (!dropdown.contains(e.target) && !dropdownTrigger.contains(e.target) && !menu.contains(e.target)) {
-            dropdown.classList.remove('active'); // Cierra el dropdown si se hace clic fuera
+        const isClickInsideMenu = menu.contains(e.target);
+        const isClickOnMenuButton = menuButton.contains(e.target);
+        const isClickOnDropdown = e.target.closest('.dropdown');
+
+        if (!isClickInsideMenu && !isClickOnMenuButton && !isClickOnDropdown) {
+            menu.classList.remove('show-menu');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
         }
     });
+
+    // Cerrar menú al hacer click en enlaces (excepto dropdowns)
+    const menuLinks = document.querySelectorAll('.nav__links:not(.dropdown__trigger)');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            menu.classList.remove('show-menu');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        });
+    });
 });
+
 
