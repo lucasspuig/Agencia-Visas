@@ -1351,7 +1351,7 @@ margin-top: -50px;
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     position: relative;
 }
 
@@ -1418,7 +1418,7 @@ margin-top: -50px;
 }
 
 .knowledge__picture {
-    max-width: 500px;
+    max-width: 573px;
     position: relative;
 }
 
@@ -3039,7 +3039,7 @@ margin-top: -50px;
     line-height: 35px;
 }
 .footer__title img {
-    width: 120px;
+    width: 170px;
     height: auto;
     margin-left: -4px;
 }
@@ -3075,10 +3075,11 @@ margin-top: -50px;
 .nav--footer {
     padding-bottom: 0px;
     display: flex;
-    gap: 10rem;
+    gap: 4rem;
     height: 100%;
 }
-.nav__link--footer{
+.nav__link--footer {
+    list-style-type: none;
     display: flex;
     margin: 0;
     margin-right: 20px;
@@ -3134,6 +3135,7 @@ margin-top: -50px;
 }
 
 .footer__copyright{
+    color: #e2e2e26c;
     font-weight: 600;
     font-size: 11px;
     margin-top: 2%;
@@ -3145,7 +3147,7 @@ margin-top: -50px;
 }
 .footer__icons i {
     color: white; 
-    font-size: 20px; 
+    font-size: 27px; 
     transition: color 0.3s ease; 
     margin-right: 25px; 
     
@@ -3153,7 +3155,7 @@ margin-top: -50px;
 
 
 .footer__icons:hover i {
-    color: rgb(29, 55, 174); 
+    color: #52a8f9; 
 }
 
 .footer__img{
@@ -3248,79 +3250,7 @@ margin-top: -50px;
 }
 
 
-    .nav__links--menu {
-        justify-content: center;
-        padding: 20px;
-        background: none;
-        border: none;
-        font-size: 18px;
-    }
-
-    .nav__img {
-        display: block;
-        width: 60px;
-    }
-
-   
-
-    .knowledge__container{
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content 1fr;
-        gap: 3em;
-        text-align: center;
-    }
-
-    .knowledge__picture{
-        grid-row: 1/2;
-        justify-self: center;
-    }
-
-    .testimony__container{
-        grid-template-columns: 30px 1fr 30px;
-    }
-
-    .testimony__body{
-        grid-template-columns: 1fr;
-        grid-template-rows: max-content max-content;
-        gap: 3em;
-        justify-items:center ;
-    }
-
-
-    .testimony__img{
-        width: 200px;
-        height: 200px;
-        
-    }
-
-    .questions__copy{
-        width: 100%;
-    }
-
-    .footer__container{
-        flex-wrap: wrap;
-    }
-
-    .nav--footer{
-        width: 100%;
-        justify-items: center;
-    }
-
-    .nav__link--footer{
-        width: 100%;
-        justify-content: space-evenly;
-        margin: 0;
-    }
-
-    .footer__form{
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    .footer__input{
-        flex: 1;
-    }
-
+  
 
 @media screen and (max-width: 768px) {
 
@@ -4023,17 +3953,27 @@ margin-top: -50px;
 }
 @media (min-width: 330px) and (max-width: 375px) {
         /*hero y nav*/
-
-        .hero {
-            width: 100%;
-            height: 100vh;
-            min-height: 600px;
-            max-height: 700px;
-            position: relative;
-            display: grid;
-            grid-template-rows: 100px 1fr;
-            color: #fff;
+        .nav {
+            height: 99px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 16px 0rem;
+            z-index: 1000;
+            transition: all 0.3s ease;
         }
+
+        .hero{
+                width: 100%;
+                height: 100vh;
+                min-height: 600px;
+                max-height: 700px;
+                position: relative;
+                display: grid;
+                grid-template-rows: 100px 1fr;
+                color: #fff;
+                align-items: center;
+            }
         
         .hero::before {
             content: "";
@@ -4081,8 +4021,7 @@ margin-top: -50px;
             
         }
         .hero-featuress {
-            display: flex
-    ;
+            display: flex;
             justify-content: center;
             gap: 0.2rem;
             margin-top: 3rem 48px;
