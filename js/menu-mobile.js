@@ -4,16 +4,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.nav__link--menu');
     const dropdowns = document.querySelectorAll('.dropdown');
     const dropdownTriggers = document.querySelectorAll('.dropdown__trigger');
+    const allMenuLinks = document.querySelectorAll('.nav__link--menu a:not(.dropdown__trigger), .dropdown__content a');
+
+    // Función para cerrar el menú y los dropdowns
+    function closeMenuAndDropdowns() {
+        menu.classList.remove('show-menu');
+        dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+    }
 
     // Abrir menú móvil
     menuButton.addEventListener('click', function () {
         menu.classList.add('show-menu');
     });
 
-    // Cerrar menú móvil
-    closeButton.addEventListener('click', function () {
-        menu.classList.remove('show-menu');
-        dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+    // Cerrar menú móvil con botón de cerrar
+    closeButton.addEventListener('click', closeMenuAndDropdowns);
+
+    // Cerrar menú al hacer clic en cualquier enlace (excepto triggers de dropdown)
+    allMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMenuAndDropdowns);
     });
 
     // Manejar dropdowns
@@ -47,18 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const isClickOnDropdown = e.target.closest('.dropdown');
 
         if (!isClickInsideMenu && !isClickOnMenuButton && !isClickOnDropdown) {
-            menu.classList.remove('show-menu');
-            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            closeMenuAndDropdowns();
         }
-    });
-
-    // Cerrar menú al hacer click en enlaces (excepto dropdowns)
-    const menuLinks = document.querySelectorAll('.nav__links:not(.dropdown__trigger)');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            menu.classList.remove('show-menu');
-            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
-        });
     });
 });
 

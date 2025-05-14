@@ -5,3 +5,316 @@
         width: auto;
     }
 }
+@media (min-width: 375px) and (max-width: 425px) {
+
+    /*hero y nav*/
+    .hero__container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        gap: 0em;
+        padding: 785px 20px 10px;
+        gap: 0em;
+        
+    }
+
+    .nav__logo img {
+        max-height: 130px;
+        margin-top: 3%;
+        width: auto;
+    }
+    .greeting {
+        font-size: 1.7rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .typing-text {
+        font-size: 1.2rem;
+    }
+    .hero-description {
+        font-size: 0.9rem;
+        margin: 9px auto;
+    }
+    .hero__container {
+        gap: 0em;
+        
+        
+    }
+    .hero-buttons {
+        font-size: 1rem;
+        display: flex;
+        gap: 0.1rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-buttons {
+        display: flex;
+        gap: 0.1rem;
+        justify-content: center;
+    }
+    .btn {
+        display: inline-block;
+        
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: var(--transition);
+        margin: 0.5rem;
+    }
+    /*servicios*/
+    .services-grid {
+        gap: 2rem;
+        
+    }
+    .section-title {
+        font-family: Phudu, sans-serif;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 56px;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #1a365d;
+    }
+    /*nosotros*/
+    .knowledge__paragraph {
+        padding: 15px 5px 15px 5px;
+        margin-bottom: 5px;
+    }
+    .pretitle-image {
+        opacity: 0;
+        transform: translate3d(-50px, 50px, 0px) rotate(15deg);
+        transition: opacity 0.9sease-out, transform 0.9sease-out;
+        width: 12%;
+        margin-top: 2%;
+    }
+    .subtitle {
+        font-size: 2.7rem;
+        text-align: center;
+        padding-left: 63px;
+    }
+
+    h2 {
+        font-family: Phudu, sans-serif;
+        color: #081e0c;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 54px;
+    }
+    .avion-nosotros::after {
+        content: '';
+        position: absolute;
+        bottom: 18px;
+        margin-left: 34px;
+        left: 0;
+        width: 198px;
+        height: 2px;
+        background: linear-gradient(90deg, #2091F9, transparent);
+        animation: lineGrow 2s ease-in-out infinite;
+    }
+    .knowledege__texts {
+        text-align: center;
+        color: white;
+    }
+    .knowledge {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .knowledge__container {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3em;
+        align-items: center;
+        padding: 8rem 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* seccion de jesi */
+    .subtitlejes {
+        font-family: Phudu, sans-serif;
+        color: rgb(8, 30, 12);
+        text-transform: uppercase;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 35px;
+        text-align: center;
+    }
+    .testimony__container {
+        grid-template-columns: 14px 1fr 16px;
+        /* gap: 0.9em; */
+    }
+    .testimony__review {
+        padding: 10px 10px 0px 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .testimony__course {
+        background-color: rgba(65, 105, 225, 0.366);
+        color: #fff;
+        display: inline-block;
+        padding: 8px;
+        border-radius: 10%;
+    }
+    .testimony__img {
+        border-radius: 5%;
+
+    }
+    .testimony__img {
+        width: 282px;
+        height: 352px;
+    }
+    .testimony__course {
+        margin-top: 18px;
+    }
+
+    /* seccion de preguntas */
+    .subtitlepregunta::after {
+        content: '';
+        position: absolute;
+        bottom: 7px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, #2091F9, #6BC5F8);
+        border-radius: 2px;
+    }
+    .subtitlepregunta {
+        font-family: Phudu, sans-serif;
+        color: #081e0c;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+    .questions__paragraph{
+        font-size: 15px;
+    }
+    /* seccion por que elegirnos */
+    .section-titleelegirnos {
+        font-family: Phudu, sans-serif;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 80px;
+        text-align: center;
+        margin-bottom: 4rem;
+        color: #1a365d;
+    }
+    .testimony__body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid
+    ;
+        grid-template-columns: 1fr;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        gap: 2em;
+        /* opacity: 0; */
+        pointer-events: none;
+        /* background: rgba(11, 26, 54, 0.6); */
+        /* padding: 4rem; */
+        /* border-radius: 30px; */
+        /* box-shadow: 0 0 40px rgba(32, 145, 249, 0.2); */
+        /* backdrop-filter: blur(10px); */
+        /* border: 1px solid rgba(32, 145, 249, 0.1); */
+        /* transition: opacity 0.5s ease; */
+        align-items: center;
+    }
+
+    /*fotter*/
+
+    .nav1 {
+        padding: 8px 0px 0px 6px;
+    }
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        padding-bottom: 0px;
+    }
+    .footer__input {
+        flex-basis: 6%;
+        margin: 0;
+        margin-bottom: 0px;
+        gap: 2rem;
+    }
+    .nav--footer {
+        padding-bottom: 22px;
+        display: flex;
+        gap: 0rem;
+        height: 84%;
+    }
+    .footer__newsletter {
+        font-family: Phudu, sans-serif;
+        
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 35px;
+    }
+
+    .nav__links {
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .nav__link--footer {
+        display: flex;
+        margin: 0;
+        margin-right: 0px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nav__link { 
+        gap: 0.5em;
+    }
+
+    .nav__link--footer {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .footer__title img {
+        width: 94px;
+        height: auto;
+        margin-top: 30%;
+        margin-right: -21px;
+    }
+    .footer__inputs input {
+        width: 33%;
+    }
+.footer__copyright {
+    font-weight: 300;
+    font-size: 10px;
+    margin-top: 2%;
+}
+.footer__social {
+    text-align: center;
+    margin-left: 13%;
+}
+}
